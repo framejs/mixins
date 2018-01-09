@@ -1,0 +1,47 @@
+{
+  "name": "@framejs/mixins",
+  "version": "0.0.1",
+  "description": "A set of mixing to help and speed up development of web components",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "rm -rf dist && node node_modules/typescript/bin/tsc -p tsconfig.json -w",
+    "build": "rm -rf dist && node node_modules/typescript/bin/tsc -p tsconfig.json",
+    "prettier": "node node_modules/prettier/bin/prettier.js --write lib/**/*.ts --parser typescript",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/framejs/mixins.git"
+  },
+  "pre-commit": [
+    "prettier"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Emil Rune Møller",
+    "email": "emilrmoeller@gmail.com",
+    "url": "https://twitter.com/emilrmoeller"
+  },
+  "keywords": [
+    "webcomponents",
+    "framejs",
+    "frame",
+    "js",
+    "javascript"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/framejs/mixins/issues"
+  },
+  "homepage": "https://github.com/framejs/mixins#readme",
+  "devDependencies": {
+    "@types/node": "^8.5.7",
+    "prettier": "^1.9.2",
+    "typescript": "^2.6.2"
+  }
+}
