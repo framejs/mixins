@@ -5,7 +5,7 @@ export const Mix = superclass => new MixinBuilder(superclass);
  *
  * @mixin
  * @example
- * class MyClass extends Mix(HTMLElement).with(Mixin, OtherMixin)
+ * class MyClass extends Mix(HTMLElement).with(Mixin, OtherMixin) {...}
  * @param {Function} superclass - The base class to extend upon.
  */
 export class MixinBuilder {

@@ -25,7 +25,7 @@ export interface IProperty {
  *     static get props() {
  *         return {
  *             myProp: {
- *                 type: String, // String | Boolean | Object
+ *                 type: String, // String | Boolean | Object | Number | Array
  *                 reflectToAttribute: true, // true | false (optional)
  *                 value: 'Hello', // (optional)
  *                 observer: '_myPropChanged' // (optional),

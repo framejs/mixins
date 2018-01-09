@@ -7,7 +7,7 @@ Frame mixins is a mixin library meant to speed up development and reduce the amo
 Clone repo:
 
 ```sh
-$ git clone https://github.com/framejs/cli.git
+$ git clone https://github.com/framejs/mixins.git
 ```
 
 Install dependencies:
