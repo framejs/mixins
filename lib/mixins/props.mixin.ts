@@ -107,8 +107,12 @@ export const PropsMixin = (Base: any = HTMLElement): any => {
                 }
             }
 
-            if (type === 'String' || type === 'Object' || type === 'Number') {
+            if (type === 'String' || type === 'Number') {
                 if (value) this.setAttribute(attr, value.toString());
+            }
+
+            if (type === 'Array' || type === 'Object') {
+                if (value) this.setAttribute(attr, JSON.stringify(value));
             }
         }
 
@@ -117,7 +121,7 @@ export const PropsMixin = (Base: any = HTMLElement): any => {
                 return this.hasAttribute(attr);
             }
 
-            if (type === 'Object' || type === 'Number') {
+            if (type === 'Object' || type === 'Number' || type === 'Array') {
                 return JSON.parse(this.getAttribute(attr));
             }
 
