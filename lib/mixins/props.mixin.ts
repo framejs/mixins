@@ -9,7 +9,7 @@ export interface IProps {
 export interface IProperty {
     type: Function;
     reflectToAttribute?: boolean;
-    value?: string | boolean | object;
+    value?: string | boolean | object | number;
     observer?: string;
     notify?: boolean;
 }
@@ -107,7 +107,7 @@ export const PropsMixin = (Base: any = HTMLElement): any => {
                 }
             }
 
-            if (type === 'String' || type === 'Object') {
+            if (type === 'String' || type === 'Object' || type === 'Number') {
                 if (value) this.setAttribute(attr, value.toString());
             }
         }
@@ -117,7 +117,7 @@ export const PropsMixin = (Base: any = HTMLElement): any => {
                 return this.hasAttribute(attr);
             }
 
-            if (type === 'Object') {
+            if (type === 'Object' || type === 'Number') {
                 return JSON.parse(this.getAttribute(attr));
             }
 

@@ -1,6 +1,6 @@
 {
   "name": "@framejs/mixins",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of mixing to help and speed up development of web components",
   "main": "dist/index.js",
   "files": [
