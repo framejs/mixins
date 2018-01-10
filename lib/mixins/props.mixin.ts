@@ -50,12 +50,20 @@ export const PropsMixin = (Base: any = HTMLElement): any => {
 
         constructor() {
             super();
+            if (!this._properties) {
+                return;
+            }
+
             this._initObserver();
             this._initDataProxy();
             polyfillCustomEvent();
         }
 
         connectedCallback() {
+            if (!this._properties) {
+                return;
+            }
+
             Object.keys(this._properties).forEach(key => {
                 const attr = camelCaseToHyphen(key);
                 const prop = this._properties[key];
@@ -165,7 +173,7 @@ export const PropsMixin = (Base: any = HTMLElement): any => {
                         // Fire custom event
                         if (storedValue && propertyFromStore.notify) {
                             const event = new CustomEvent(`${prop}-changed`, {
-                                detail: { value: value }
+                                detail: { [prop]: value }
                             });
 
                             context.dispatchEvent(event);
