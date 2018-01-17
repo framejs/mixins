@@ -1,5 +1,7 @@
 # Frame Mixins
 
+> NB. These mixins are in a very early stage and very likely to change.
+
 Frame mixins is a mixin library meant to speed up development and reduce the amount of boilerplate when creating web components. All mixins are written in Typescript, and is works great with [framejs/cli](https://github.com/framejs/cli)
 
 ## Development
